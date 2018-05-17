@@ -1,0 +1,1 @@
+img = rgb2gray(imread('lena.jpg'));IMG = fftshift(fft2(img));% hight and low frequency[x,y] = size(IMG);alpha = 0.0001;g_mask = my_gaussian_filter(x,y, alpha);figure;subplot(1,2,1)imshow(g_mask,[])title('gaussian mask')subplot(1,2,2)imshow(1-g_mask,[])title('1.0 - gaussian mask')
